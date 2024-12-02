@@ -14,6 +14,13 @@ void AMyPlayerController::BeginPlay()
 {
     Super::BeginPlay();
 
+    // Enable the mouse cursor
+    bShowMouseCursor = true;
+
+    // Set the cursor to interactable mode (optional)
+    bEnableClickEvents = true;
+    bEnableMouseOverEvents = true;
+
     UE_LOG(LogTemp, Warning, TEXT("===> AMyPlayerController::BeginPlay()"));
 
     // Find the Material Parameter Collection (MPC) asset in your project

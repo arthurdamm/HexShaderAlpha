@@ -30,7 +30,10 @@ Cache/
 
 # uasset files of MedievalDungeon exceed github 2GB limits
 Content/MedievalDungeon/
-# Content/MedievalDungeon/*
+Content/EuropeanHornbeam/
+
+
+
 
 # Build output
 /Scripts/build/
