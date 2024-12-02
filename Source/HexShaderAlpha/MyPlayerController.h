@@ -16,7 +16,16 @@ class HEXSHADERALPHA_API AMyPlayerController : public APlayerController
 	
 public:
     virtual void PlayerTick(float DeltaTime) override;
+    virtual void BeginPlay() override;
 
     // Function to select hex under cursor
     void SelectHexUnderCursor();
+
+    float size = 100.0f;
+
+private:
+   UMaterialParameterCollectionInstance* MPCInstance;
 };
+
+FVector2D axial_round_branchless(FVector2D hex);
+FVector2D pixel_to_pointy_hex(FVector point, float size);
