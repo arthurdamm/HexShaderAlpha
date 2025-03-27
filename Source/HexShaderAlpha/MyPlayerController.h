@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+
 #include "MyPlayerController.generated.h"
 
 /**
@@ -18,13 +19,17 @@ public:
     virtual void PlayerTick(float DeltaTime) override;
     virtual void BeginPlay() override;
 
+    AMyPlayerController();
+
     // Function to select hex under cursor
     void SelectHexUnderCursor();
+    int SetHexMaterial();
 
     float size = 100.0f;
 
 private:
-   UMaterialParameterCollectionInstance* MPCInstance;
+   UMaterialParameterCollectionInstance* MPCInstance = nullptr;
+   UMaterialInterface* HexMaterial = nullptr;
 };
 
 FVector2D axial_round_branchless(FVector2D hex);

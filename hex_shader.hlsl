@@ -29,7 +29,7 @@ vec3 axial_to_cube(vec2 hex) {
     float q = -hex.x - hex.y;
     return vec3(hex.x, hex.y, q);
 }
-
+[]
 vec2 cube_to_axial(vec3 cube) {
     return vec2(cube.x, cube.y);
 }
