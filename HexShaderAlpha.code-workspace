@@ -6,7 +6,7 @@
 		},
 		{
 			"name": "UE5",
-			"path": "C:\\Program Files\\Epic Games\\UE_5.3"
+			"path": "/Users/Shared/Epic Games/UE_5.3"
 		}
 	],
 	"settings": {
@@ -16,307 +16,590 @@
 	"extensions": {
 		"recommendations": [
 			"ms-vscode.cpptools",
-			"ms-dotnettools.csharp"
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
 		]
 	},
 	"tasks": {
 		"version": "2.0.0",
 		"tasks": [
 			{
-				"label": "HexShaderAlpha Win64 Debug Build",
+				"label": "HexShaderAlpha Mac Debug Build",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"Debug",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlpha Win64 Debug Rebuild",
+				"label": "HexShaderAlpha Mac Debug Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"Debug",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"HexShaderAlpha Win64 Debug Clean"
+					"HexShaderAlpha Mac Debug Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlpha Win64 Debug Clean",
+				"label": "HexShaderAlpha Mac Debug Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"Debug",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlpha Win64 DebugGame Build",
+				"label": "HexShaderAlpha Mac DebugGame Build",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"DebugGame",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlpha Win64 DebugGame Rebuild",
+				"label": "HexShaderAlpha Mac DebugGame Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"DebugGame",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"HexShaderAlpha Win64 DebugGame Clean"
+					"HexShaderAlpha Mac DebugGame Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlpha Win64 DebugGame Clean",
+				"label": "HexShaderAlpha Mac DebugGame Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"DebugGame",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"Mac",
+					"Development",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlpha Win64 Development Build",
+				"label": "HexShaderAlpha Mac Development Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"Development",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
-				],
-				"problemMatcher": "$msCompile",
-				"type": "shell",
-				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
-			},
-			{
-				"label": "HexShaderAlpha Win64 Development Rebuild",
-				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
-				"args": [
-					"HexShaderAlpha",
-					"Win64",
-					"Development",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"HexShaderAlpha Win64 Development Clean"
+					"HexShaderAlpha Mac Development Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlpha Win64 Development Clean",
+				"label": "HexShaderAlpha Mac Development Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"Development",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"Mac",
+					"Test",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlpha Win64 Test Build",
+				"label": "HexShaderAlpha Mac Test Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"Test",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
-				],
-				"problemMatcher": "$msCompile",
-				"type": "shell",
-				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
-			},
-			{
-				"label": "HexShaderAlpha Win64 Test Rebuild",
-				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
-				"args": [
-					"HexShaderAlpha",
-					"Win64",
-					"Test",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"HexShaderAlpha Win64 Test Clean"
+					"HexShaderAlpha Mac Test Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlpha Win64 Test Clean",
+				"label": "HexShaderAlpha Mac Test Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"Test",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"Mac",
+					"Shipping",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlpha Win64 Shipping Build",
+				"label": "HexShaderAlpha Mac Shipping Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"Shipping",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
-				],
-				"problemMatcher": "$msCompile",
-				"type": "shell",
-				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
-			},
-			{
-				"label": "HexShaderAlpha Win64 Shipping Rebuild",
-				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
-				"args": [
-					"HexShaderAlpha",
-					"Win64",
-					"Shipping",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"HexShaderAlpha Win64 Shipping Clean"
+					"HexShaderAlpha Mac Shipping Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlpha Win64 Shipping Clean",
+				"label": "HexShaderAlpha Mac Shipping Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
-					"Win64",
+					"Mac",
 					"Shipping",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Debug",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Debug",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HexShaderAlpha IOS Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Debug",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"DebugGame",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"DebugGame",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HexShaderAlpha IOS DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"DebugGame",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Development",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Development",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HexShaderAlpha IOS Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Development",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Test",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Test",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HexShaderAlpha IOS Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Test",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Shipping",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Shipping",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HexShaderAlpha IOS Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlpha IOS Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlpha",
+					"IOS",
+					"Shipping",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Debug Build",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Debug",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Debug Cook+Deploy",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Debug",
 					"-ServerConfig=Debug",
@@ -333,22 +616,22 @@
 					"-Deploy"
 				],
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Development Build",
+					"HexShaderAlphaEditor Mac Development Build",
 					"HexShaderAlpha Android Debug Build"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Debug Cook",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Debug",
 					"-ServerConfig=Debug",
@@ -363,22 +646,22 @@
 					"-Cook"
 				],
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Development Build",
+					"HexShaderAlphaEditor Mac Development Build",
 					"HexShaderAlpha Android Debug Build"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Debug Deploy",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Debug",
 					"-ServerConfig=Debug",
@@ -400,18 +683,18 @@
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Debug Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Debug",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -420,51 +703,52 @@
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Debug Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Debug",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android DebugGame Build",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"DebugGame",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android DebugGame Cook+Deploy",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=DebugGame",
 					"-ServerConfig=DebugGame",
@@ -481,22 +765,22 @@
 					"-Deploy"
 				],
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Development Build",
+					"HexShaderAlphaEditor Mac Development Build",
 					"HexShaderAlpha Android DebugGame Build"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android DebugGame Cook",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=DebugGame",
 					"-ServerConfig=DebugGame",
@@ -511,22 +795,22 @@
 					"-Cook"
 				],
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Development Build",
+					"HexShaderAlphaEditor Mac Development Build",
 					"HexShaderAlpha Android DebugGame Build"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android DebugGame Deploy",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=DebugGame",
 					"-ServerConfig=DebugGame",
@@ -548,18 +832,18 @@
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android DebugGame Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"DebugGame",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -568,51 +852,52 @@
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android DebugGame Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"DebugGame",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Development Build",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Development",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Development Cook+Deploy",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Development",
 					"-ServerConfig=Development",
@@ -629,22 +914,22 @@
 					"-Deploy"
 				],
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Development Build",
+					"HexShaderAlphaEditor Mac Development Build",
 					"HexShaderAlpha Android Development Build"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Development Cook",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Development",
 					"-ServerConfig=Development",
@@ -659,22 +944,22 @@
 					"-Cook"
 				],
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Development Build",
+					"HexShaderAlphaEditor Mac Development Build",
 					"HexShaderAlpha Android Development Build"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Development Deploy",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Development",
 					"-ServerConfig=Development",
@@ -696,18 +981,18 @@
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Development Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Development",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -716,51 +1001,52 @@
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Development Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Development",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Test Build",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Test",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Test Cook+Deploy",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Test",
 					"-ServerConfig=Test",
@@ -777,22 +1063,22 @@
 					"-Deploy"
 				],
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Development Build",
+					"HexShaderAlphaEditor Mac Development Build",
 					"HexShaderAlpha Android Test Build"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Test Cook",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Test",
 					"-ServerConfig=Test",
@@ -807,22 +1093,22 @@
 					"-Cook"
 				],
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Development Build",
+					"HexShaderAlphaEditor Mac Development Build",
 					"HexShaderAlpha Android Test Build"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Test Deploy",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Test",
 					"-ServerConfig=Test",
@@ -844,18 +1130,18 @@
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Test Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Test",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -864,51 +1150,52 @@
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Test Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Test",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Shipping Build",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Shipping",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Shipping Cook+Deploy",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Shipping",
 					"-ServerConfig=Shipping",
@@ -925,22 +1212,22 @@
 					"-Deploy"
 				],
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Development Build",
+					"HexShaderAlphaEditor Mac Development Build",
 					"HexShaderAlpha Android Shipping Build"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Shipping Cook",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Shipping",
 					"-ServerConfig=Shipping",
@@ -955,22 +1242,22 @@
 					"-Cook"
 				],
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Development Build",
+					"HexShaderAlphaEditor Mac Development Build",
 					"HexShaderAlpha Android Shipping Build"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Shipping Deploy",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\RunUAT.bat",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
 				"args": [
 					"BuildCookRun",
-					"-ScriptsForProject=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
-					"-Project=C:/Users/indig/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-ScriptsForProject=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-Project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-noP4",
 					"-ClientConfig=Shipping",
 					"-ServerConfig=Shipping",
@@ -992,18 +1279,18 @@
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Shipping Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Shipping",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -1012,186 +1299,190 @@
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
 				"label": "HexShaderAlpha Android Shipping Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlpha",
 					"Android",
 					"Shipping",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlphaEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlphaEditor",
+					"Mac",
+					"Debug",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlphaEditor Win64 Debug Build",
+				"label": "HexShaderAlphaEditor Mac Debug Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlphaEditor",
-					"Win64",
+					"Mac",
 					"Debug",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
-				],
-				"problemMatcher": "$msCompile",
-				"type": "shell",
-				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
-			},
-			{
-				"label": "HexShaderAlphaEditor Win64 Debug Rebuild",
-				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
-				"args": [
-					"HexShaderAlphaEditor",
-					"Win64",
-					"Debug",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Debug Clean"
+					"HexShaderAlphaEditor Mac Debug Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlphaEditor Win64 Debug Clean",
+				"label": "HexShaderAlphaEditor Mac Debug Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlphaEditor",
-					"Win64",
+					"Mac",
 					"Debug",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlphaEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlphaEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlphaEditor Win64 DebugGame Build",
+				"label": "HexShaderAlphaEditor Mac DebugGame Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlphaEditor",
-					"Win64",
+					"Mac",
 					"DebugGame",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
-				],
-				"problemMatcher": "$msCompile",
-				"type": "shell",
-				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
-			},
-			{
-				"label": "HexShaderAlphaEditor Win64 DebugGame Rebuild",
-				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
-				"args": [
-					"HexShaderAlphaEditor",
-					"Win64",
-					"DebugGame",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 DebugGame Clean"
+					"HexShaderAlphaEditor Mac DebugGame Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlphaEditor Win64 DebugGame Clean",
+				"label": "HexShaderAlphaEditor Mac DebugGame Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlphaEditor",
-					"Win64",
+					"Mac",
 					"DebugGame",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "HexShaderAlphaEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"HexShaderAlphaEditor",
+					"Mac",
+					"Development",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlphaEditor Win64 Development Build",
+				"label": "HexShaderAlphaEditor Mac Development Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlphaEditor",
-					"Win64",
+					"Mac",
 					"Development",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
-				],
-				"problemMatcher": "$msCompile",
-				"type": "shell",
-				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
-			},
-			{
-				"label": "HexShaderAlphaEditor Win64 Development Rebuild",
-				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
-				"args": [
-					"HexShaderAlphaEditor",
-					"Win64",
-					"Development",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"HexShaderAlphaEditor Win64 Development Clean"
+					"HexShaderAlphaEditor Mac Development Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			},
 			{
-				"label": "HexShaderAlphaEditor Win64 Development Clean",
+				"label": "HexShaderAlphaEditor Mac Development Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"HexShaderAlphaEditor",
-					"Win64",
+					"Mac",
 					"Development",
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
-					"-waitmutex"
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
+					"-waitmutex",
+					"-clean"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
 				}
 			}
 		]
@@ -1202,151 +1493,104 @@
 			{
 				"name": "Launch HexShaderAlpha (Debug)",
 				"request": "launch",
-				"program": "C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
-				"preLaunchTask": "HexShaderAlpha Win64 Debug Build",
+				"program": "/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "HexShaderAlpha Mac Debug Build",
 				"args": [
 				],
-				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3",
-				"stopAtEntry": false,
-				"console": "externalTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch HexShaderAlpha (DebugGame)",
 				"request": "launch",
-				"program": "C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
-				"preLaunchTask": "HexShaderAlpha Win64 DebugGame Build",
+				"program": "/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "HexShaderAlpha Mac DebugGame Build",
 				"args": [
 				],
-				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3",
-				"stopAtEntry": false,
-				"console": "externalTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch HexShaderAlpha (Development)",
 				"request": "launch",
-				"program": "C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\Binaries\\Win64\\UnrealGame.exe",
-				"preLaunchTask": "HexShaderAlpha Win64 Development Build",
+				"program": "/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "HexShaderAlpha Mac Development Build",
 				"args": [
 				],
-				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3",
-				"stopAtEntry": false,
-				"console": "externalTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch HexShaderAlpha (Test)",
 				"request": "launch",
-				"program": "C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
-				"preLaunchTask": "HexShaderAlpha Win64 Test Build",
+				"program": "/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "HexShaderAlpha Mac Test Build",
 				"args": [
 				],
-				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3",
-				"stopAtEntry": false,
-				"console": "externalTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch HexShaderAlpha (Shipping)",
 				"request": "launch",
-				"program": "C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
-				"preLaunchTask": "HexShaderAlpha Win64 Shipping Build",
+				"program": "/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "HexShaderAlpha Mac Shipping Build",
 				"args": [
 				],
-				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3",
-				"stopAtEntry": false,
-				"console": "externalTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch HexShaderAlphaEditor (Debug)",
 				"request": "launch",
-				"program": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
-				"preLaunchTask": "HexShaderAlphaEditor Win64 Debug Build",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "HexShaderAlphaEditor Mac Debug Build",
 				"args": [
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject"
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject"
 				],
-				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3",
-				"stopAtEntry": false,
-				"console": "externalTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch HexShaderAlphaEditor (DebugGame)",
 				"request": "launch",
-				"program": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
-				"preLaunchTask": "HexShaderAlphaEditor Win64 DebugGame Build",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "HexShaderAlphaEditor Mac DebugGame Build",
 				"args": [
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject"
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject"
 				],
-				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3",
-				"stopAtEntry": false,
-				"console": "externalTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch HexShaderAlphaEditor (Development)",
 				"request": "launch",
-				"program": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
-				"preLaunchTask": "HexShaderAlphaEditor Win64 Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "HexShaderAlphaEditor Mac Development Build",
 				"args": [
-					"C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject"
+					"/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject"
 				],
-				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3",
-				"stopAtEntry": false,
-				"console": "externalTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "C:\\Program Files\\Epic Games\\UE_5.3"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
 			},
 			{
 				"name": "Generate Project Files",
 				"type": "coreclr",
 				"request": "launch",
-				"preLaunchTask": "UnrealBuildTool Win64 Development Build",
-				"program": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Build\\BatchFiles\\RunUBT.bat",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Build/BatchFiles/RunUBT.bat",
 				"args": [
 					"-projectfiles",
 					"-vscode",
-					"-project=C:\\Users\\indig\\Documents\\Unreal Projects\\HexShaderAlpha\\HexShaderAlpha.uproject",
+					"-project=/Users/arthurdamm/Documents/Unreal Projects/HexShaderAlpha/HexShaderAlpha.uproject",
 					"-game",
 					"-engine",
 					"-dotnet"
 				],
-				"console": "externalTerminal",
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
 				"stopAtEntry": false,
-				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3"
+				"cwd": "/Users/Shared/Epic Games/UE_5.3"
 			}
 		]
 	}

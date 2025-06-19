@@ -20,7 +20,7 @@
 
 AMyPlayerController::AMyPlayerController()
 {
-    UE_LOG(LogTemp, Warning, TEXT("===> AMyPlayerController::Constructor() !!!"));
+    UE_LOG(LogTemp, Warning, TEXT("===> AMyPlayerController::Constructor() fuzzbol 007!!!!!"));
     
     PrimaryActorTick.bCanEverTick = true;
 
