@@ -5,6 +5,8 @@ Saved/
 DerivedDataCache/
 Build/
 
+Mac/
+
 # Editor specific
 .vs/
 .vscode/
