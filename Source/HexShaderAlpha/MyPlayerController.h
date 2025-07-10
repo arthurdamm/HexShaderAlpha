@@ -25,6 +25,8 @@ public:
     void SelectHexUnderCursor();
     int SetHexMaterial();
 
+    void WriteHexCoordsToRenderTarget(UTextureRenderTarget2D* RenderTarget, const TArray<FIntPoint>& HexCoords);
+
     float size = 100.0f;
 
 private:

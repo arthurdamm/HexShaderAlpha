@@ -16,7 +16,8 @@ public class HexShaderAlpha : ModuleRules
 			"InputCore", 
 			"Landscape",
 			"RHI",
-			"Renderer" 
+			"Renderer",
+			"RenderCore" 
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

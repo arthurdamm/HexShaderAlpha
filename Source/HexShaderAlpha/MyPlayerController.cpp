@@ -18,9 +18,17 @@
 #include "DrawDebugHelpers.h"
 
 
+// Example includes
+#include "Engine/TextureRenderTarget2D.h"
+// #include "Engine/World.h"
+#include "Kismet/KismetRenderingLibrary.h"
+#include "Materials/MaterialInstanceDynamic.h"
+#include "Engine/Canvas.h"
+#include "CanvasItem.h"
+
 AMyPlayerController::AMyPlayerController()
 {
-    UE_LOG(LogTemp, Warning, TEXT("===> AMyPlayerController::Constructor() fuzzbol 007!!!!!"));
+    UE_LOG(LogTemp, Warning, TEXT("===> AMyPlayerController::Constructor() !phoenix!"));
     
     PrimaryActorTick.bCanEverTick = true;
 
@@ -283,4 +291,42 @@ FVector2D pixel_to_pointy_hex(FVector point, float size) {
     float q = (sqrt(3.)/3. * point.X  -  1./3. * point.Y) / size;
     float r = (                        2./3. * point.Y) / size;
     return axial_round_branchless(q, r);
+}
+
+
+
+
+void AMyPlayerController::WriteHexCoordsToRenderTarget(UTextureRenderTarget2D* RenderTarget, const TArray<FIntPoint>& HexCoords)
+{
+    if (!RenderTarget) return;
+
+    const int32 TexWidth = RenderTarget->SizeX;
+    const int32 MaxHexes = FMath::Min(HexCoords.Num(), TexWidth);
+
+    UWorld* World = GEngine->GetWorldFromContextObjectChecked(RenderTarget);
+
+    // Clear the render target
+    UKismetRenderingLibrary::ClearRenderTarget2D(World, RenderTarget);
+
+    FCanvas Canvas(RenderTarget->GameThread_GetRenderTargetResource(), nullptr, World, World->FeatureLevel);
+    Canvas.Clear(FLinearColor::Black);
+
+    for (int32 i = 0; i < MaxHexes; ++i)
+    {
+        const FIntPoint& Hex = HexCoords[i];
+
+        const float Q = static_cast<float>(Hex.X);
+        const float R = static_cast<float>(Hex.Y);
+
+        const FLinearColor HexColor(Q, R, 0.0f, 1.0f);
+
+        // Use a dummy tile with no texture: fill the pixel directly with a color
+        FCanvasTileItem TileItem(FVector2D(i, 0), FVector2D(1, 1), HexColor);
+        TileItem.BlendMode = SE_BLEND_Opaque;
+        TileItem.bFreezeTime = true;
+
+        Canvas.DrawItem(TileItem);
+    }
+
+    Canvas.Flush_GameThread();
 }
