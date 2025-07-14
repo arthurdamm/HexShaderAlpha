@@ -72,7 +72,7 @@ void AMyPlayerController::BeginPlay()
         UE_LOG(LogTemp, Error, TEXT("===> MPCInstance is NULL!"));
     }
 
-    // SetHexMaterial();
+    SetHexMaterial();
 
 }
 
@@ -126,7 +126,48 @@ void AMyPlayerController::SelectHexUnderCursor()
 // /Script/Engine.Material'/Game/M_TestCPPTexture.M_TestCPPTexture'
 int AMyPlayerController::SetHexMaterial()
 {
-    UE_LOG(LogTemp, Warning, TEXT("===> AMyPlayerController::SetHexMaterial()!!"));
+    UE_LOG(LogTemp, Warning, TEXT("===> AMyPlayerController::SetHexMaterial()!"));
+
+     TArray<AActor*> LandscapeProxies;
+    UGameplayStatics::GetAllActorsOfClass(GetWorld(), ALandscapeProxy::StaticClass(), LandscapeProxies);
+
+    if (LandscapeProxies.Num() == 0)
+    {
+        UE_LOG(LogTemp, Error, TEXT("No LandscapeProxy actors found!"));
+        return 0;
+    }
+
+    int ComponentCount = 0;
+
+    for (AActor* Actor : LandscapeProxies)
+    {
+        ALandscapeProxy* Proxy = Cast<ALandscapeProxy>(Actor);
+        if (!Proxy) continue;
+
+        const TArray<ULandscapeComponent*>& Components = Proxy->LandscapeComponents;
+        ComponentCount += Components.Num();
+
+        for (ULandscapeComponent* Comp : Components)
+        {
+            if (!Comp) continue;
+            UE_LOG(LogTemp, Warning, TEXT("Landscape component iteration"));
+
+            // UMaterialInstanceDynamic* DynMat = Comp->CreateDynamicMaterialInstance(0);
+            // if (DynMat)
+            // {
+            //     // example of setting a texture param
+            //     DynMat->SetTextureParameterValue("HexSelectionMap", YourDynamicTexture);
+            //     UE_LOG(LogTemp, Warning, TEXT("Applied dynamic material to component: %s"), *Comp->GetName());
+            // }
+            // else
+            // {
+            //     UE_LOG(LogTemp, Warning, TEXT("Failed to create dynamic material on component: %s"), *Comp->GetName());
+            // }
+        }
+    }
+
+    UE_LOG(LogTemp, Warning, TEXT("Total landscape components processed: %d"), ComponentCount);
+    // return ComponentCount;
 
     ALandscape* MyLandscape = Cast<ALandscape>(UGameplayStatics::GetActorOfClass(GetWorld(), ALandscape::StaticClass()));
 #if WITH_EDITOR    

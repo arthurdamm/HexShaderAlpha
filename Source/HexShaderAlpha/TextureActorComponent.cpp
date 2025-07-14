@@ -50,6 +50,7 @@ void UTextureActorComponent::InitializeTexture()
 	DynamicTexture = UTexture2D::CreateTransient(TextureWidth, TextureHeight, EPixelFormat::PF_B8G8R8A8, "My Dynamic Texture");
 	DynamicTexture->CompressionSettings = TextureCompressionSettings::TC_VectorDisplacementmap;
 	DynamicTexture->SRGB = 0;
+	DynamicTexture->MipGenSettings = TextureMipGenSettings::TMGS_NoMipmaps;
 	DynamicTexture->Filter = TextureFilter::TF_Nearest;
 	DynamicTexture->AddToRoot();
 	DynamicTexture->UpdateResource();
